@@ -47,13 +47,14 @@
 #define MICROPY_HW_SPI2_MISO (pin_B14)
 #define MICROPY_HW_SPI2_MOSI (pin_B15)
 
-// BTN1 has no pullup or pulldown; it is active high and broken out on a header
-#define MICROPY_HW_USRSW_PIN        (pin_A13)
-#define MICROPY_HW_USRSW_PULL       (GPIO_PULLDOWN)
-#define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_RISING)
-#define MICROPY_HW_USRSW_PRESSED    (1)
+// USR_SW has no external pullup or pulldown. The header has ground and PC13
+// so we use the internal pullup.
+#define MICROPY_HW_USRSW_PIN        (pin_C13)
+#define MICROPY_HW_USRSW_PULL       (GPIO_PULLUP)
+#define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_FALLING)
+#define MICROPY_HW_USRSW_PRESSED    (0)
 
-// Pico has 2 LEDs
+// BIOLOID_POWER has an RGB LED
 #define MICROPY_HW_LED1             (pin_B0)  // red
 #define MICROPY_HW_LED2             (pin_B1)  // green
 #define MICROPY_HW_LED3             (pin_B5)  // blue
