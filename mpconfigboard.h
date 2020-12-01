@@ -14,6 +14,7 @@
 #define MICROPY_HW_ENABLE_SERVO     (0)
 #define MICROPY_HW_ENABLE_DAC       (0)
 #define MICROPY_HW_ENABLE_CAN       (0)
+#define MICROPY_HW_ENABLE_USB       (1)
 
 // Bioloid Power has an 8 MHz HSE and the F401 does 84 MHz max
 #define MICROPY_HW_CLK_PLLM (5)
@@ -23,6 +24,9 @@
 
 // does have a 32kHz crystal
 #define MICROPY_HW_RTC_USE_LSE      (1)
+#define MICROPY_HW_RTC_USE_US       (0)
+#define MICROPY_HW_RTC_USE_CALOUT   (0)
+
 
 // UART config
 #define MICROPY_HW_UART1_TX   (pin_B6)
@@ -65,3 +69,8 @@
 
 #define MICROPY_HW_UART_REPL        PYB_UART_1
 #define MICROPY_HW_UART_REPL_BAUD   115200
+
+// USB config
+#define MICROPY_HW_USB_FS              (1)
+//#define MICROPY_HW_USB_VBUS_DETECT_PIN (pin_A9)
+//#define MICROPY_HW_USB_OTG_ID_PIN      (pin_A10)
