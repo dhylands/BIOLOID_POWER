@@ -25,10 +25,10 @@
 #define MICROPY_HW_RTC_USE_LSE      (1)
 
 // UART config
-#define MICROPY_HW_UART1_PORT (GPIOB)
-#define MICROPY_HW_UART1_PINS (GPIO_PIN_6 | GPIO_PIN_7)
-#define MICROPY_HW_UART2_PORT (GPIOA)
-#define MICROPY_HW_UART2_PINS (GPIO_PIN_2)
+#define MICROPY_HW_UART1_TX   (pin_B6)
+#define MICROPY_HW_UART1_RX   (pin_B7)
+#define MICROPY_HW_UART2_TX   (pin_A2)
+#define MICROPY_HW_UART2_RX   (pin_A3) // Not used but uart.c requires it.
 
 // I2C busses
 #define MICROPY_HW_I2C1_SCL (pin_B6)
